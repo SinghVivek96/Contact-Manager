@@ -1,15 +1,61 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
-<section class="banner d-flex justify-content-center align-items-center">
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 offset-md-2">
+					<div class="my-card mt-3">
+						<h1 class="text-center">SignUp Here</h1>
+						<form th:action="@{/cm/do_register}" method="post">
+							<div class="form-group">
+								<label for="name_field">Your Name</label> <input
+									type="text" class="form-control" id="name_field"
+									aria-describedby="emailHelp" placeholder="Enter your name" required="required">
+							</div>
+							
+							<div class="form-group">
+								<label for="email_field">Your Email</label> <input
+									type="email" class="form-control" id="email_field"
+									aria-describedby="emailHelp" placeholder="Enter your email" required="required">
+							</div>
+							
+							<div class="form-group">
+							    <label for="password_field">Password</label>
+							    <input type="password" class="form-control" id="password_field" placeholder="Enter your Password" required="required">
+						  	</div>
+						  	
+						  	
+						  	<div class="form-group">
+						  		<textarea rows="10" class="form-control" placeholder="Enter something about yourself"></textarea>
+						  	</div>
+						  	
+						  	<div class="container text-center">
+						  		<button type="submit" class="btn bg-primary text-white ">
+						  			Submit
+						  		</button>
+						  		<button type="reset" class="btn btn-warning text-white ">
+						  			Reset
+						  		</button>
+						  	</div>
+						  	
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- 
 	<div class="text-center">
-		<h2>This is signup page</h2>
+		
 		<button class="btn bg-primary btn-lg text-white">Register Here!!</button>
 	</div>
-</section>
+	 -->
+	</section>
 </body>
 </html>
